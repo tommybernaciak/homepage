@@ -1,0 +1,11 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+  font-family: 'coolvetica';
+  src: asset-url('coolvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div {font-family:coolvetica;}
