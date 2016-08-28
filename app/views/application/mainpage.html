@@ -3,4 +3,17 @@
 </div>
 
 <div class="container mainpage-sections">
+  <% @sections.each do |section| %>
+    <div class="mainpage-section">
+      <div class="mainpage-section-header"><%= section.title %></div>
+      <div class="mainpage-section-content">
+        <%= section.content %>
+      </div>
+      <% if section.section_id == 'twitter' %>
+        <div class="mainpage-section-content">
+          twitter content
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>

@@ -8,7 +8,14 @@
   font-style: normal;
 }
 
-div {font-family:coolvetica;}
+$header_size: 60px;
+$section_header_size: 40px;
+$section_content_size: 20px;
+
+div {
+  font-family:coolvetica;
+  font-size: $section_content_size;
+}
 
 .admin {
   border-style: solid;
@@ -18,8 +25,7 @@ div {font-family:coolvetica;}
 .navbar {}
 
 .header {
-  font-size: 36px;
-  font-weight: 200;
+  font-size: $header_size;
   padding: 15px;
 }
 
@@ -27,4 +33,15 @@ div {font-family:coolvetica;}
   padding: 15px;
 }
 
-.mainpage-section {}
+.mainpage-section {
+  padding-top: 10px;
+  padding-bottom: 10px;  
+}
+
+.mainpage-section-header {
+  font-size: $section_header_size;
+}
+
+.mainpage-section-content {
+  
+}
