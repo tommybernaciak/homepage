@@ -1,5 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "variables";
+@import "navbar";
+@import "admin";
 
 @font-face {
   font-family: 'geosans';
@@ -7,19 +10,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-$header_size: 60px;
-$section_header_size: 40px;
-$section_content_size: 20px;
-
-// colors
-$color_background: #fffff7;
-$color_font: #333a56;
-$color_highlight: #52658f;
-$color_buttons: #ffffff;
-$color_border: #e8e8e8;
-
-$color_admin_border: red;
 
 body {
   background-color: $color_background;
@@ -31,16 +21,6 @@ div {
   color: $color_font;
 }
 
-.admin {
-  border-style: solid;
-  border-color: $color_admin_border;
-}
-
-.navbar {
-  background-color: $color_buttons;
-  border-style: solid;
-  border-color: $color_border;
-}
 
 .header {
   font-size: $header_size;
@@ -53,7 +33,7 @@ div {
 
 .mainpage-section {
   padding-top: 10px;
-  padding-bottom: 10px;  
+  padding-bottom: 10px;
 }
 
 .mainpage-section-header {
@@ -67,3 +47,29 @@ div {
 .highlight {
   color: $color_highlight;
 }
+
+// #info
+//   display: table
+//   background: rgba(0,0,0,0.4)
+//   height: 100%
+//   width: 100%
+//   #info-content
+//     display: table-cell
+//     vertical-align: middle
+//     text-align: center
+//     text-transform: uppercase
+//     color: #fff
+//     font-size: 12px
+//     h1
+//       color: #fff
+//       border: 3px solid #fff
+//       text-align: center
+//       background: rgba(0,0,0,0.1)
+//       font-size: 22px
+//       font-weight: normal
+//       padding: 20px
+//       margin: 10px
+//       display: inline-block
+//       strong
+//         display: block
+//         font-size: 26px

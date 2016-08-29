@@ -7,20 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- TODO -->
-<!-- navbar menu -->
-<ul class="nav nav-pills navbar">
-  <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Menu <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      help
-    </ul>
-  </li>
-</ul>
+
+<input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+<div class="menu">
+  <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+  <ul>
+    <li>
+      <a href="#">Menu-1</a>
+    </li>
+    <li>
+      <a href="#">Menu-2</a>
+    </li>
+  </ul>
+</div>
 
 <%= yield %>
 
 </body>
 </html>
+
