@@ -2,8 +2,8 @@
 @import "bootstrap";
 
 @font-face {
-  font-family: 'coolvetica';
-  src: asset-url('coolvetica.ttf') format('truetype');
+  font-family: 'geosans';
+  src: asset-url('geosans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,17 +12,35 @@ $header_size: 60px;
 $section_header_size: 40px;
 $section_content_size: 20px;
 
+// colors
+$color_background: #fffff7;
+$color_font: #333a56;
+$color_highlight: #52658f;
+$color_buttons: #ffffff;
+$color_border: #e8e8e8;
+
+$color_admin_border: red;
+
+body {
+  background-color: $color_background;
+}
+
 div {
-  font-family:coolvetica;
+  font-family:geosans;
   font-size: $section_content_size;
+  color: $color_font;
 }
 
 .admin {
   border-style: solid;
-  border-color: red;
+  border-color: $color_admin_border;
 }
 
-.navbar {}
+.navbar {
+  background-color: $color_buttons;
+  border-style: solid;
+  border-color: $color_border;
+}
 
 .header {
   font-size: $header_size;
@@ -43,5 +61,9 @@ div {
 }
 
 .mainpage-section-content {
-  
+
+}
+
+.highlight {
+  color: $color_highlight;
 }
