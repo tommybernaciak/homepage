@@ -1,26 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-label {
-  cursor: pointer;
-  &:focus {
-    outline: none;
-  }
-}
-
-
 .menu {
   background-color: $color_buttons;
   border-style: solid;
   border-color: $color_border;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: #fff;
   width: 240px;
-  height: 100%;
   transform: translate3d(-240px, 0, 0);
   transition: transform 0.35s;
 
@@ -69,16 +55,5 @@ label {
 /* fade in checked menu */
 .menu-checkbox:checked + .menu {
   transform: translate3d(0, 0, 0);
-}
-
-
-
-/* for show */
-html, body {
-  height: 100%;
-}
-
-p {
-  margin-bottom: 15px;
 }
 

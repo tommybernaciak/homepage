@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "mainpage";
 @import "navbar";
 @import "admin";
 
@@ -11,8 +12,21 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: $color_background;
+}
+
+p {
+  margin-bottom: 15px;
 }
 
 div {
@@ -21,55 +35,18 @@ div {
   color: $color_font;
 }
 
+label {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
 
 .header {
   font-size: $header_size;
   padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
 }
-
-.mainpage-sections {
-  padding: 15px;
-}
-
-.mainpage-section {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.mainpage-section-header {
-  font-size: $section_header_size;
-}
-
-.mainpage-section-content {
-
-}
-
-.highlight {
-  color: $color_highlight;
-}
-
-// #info
-//   display: table
-//   background: rgba(0,0,0,0.4)
-//   height: 100%
-//   width: 100%
-//   #info-content
-//     display: table-cell
-//     vertical-align: middle
-//     text-align: center
-//     text-transform: uppercase
-//     color: #fff
-//     font-size: 12px
-//     h1
-//       color: #fff
-//       border: 3px solid #fff
-//       text-align: center
-//       background: rgba(0,0,0,0.1)
-//       font-size: 22px
-//       font-weight: normal
-//       padding: 20px
-//       margin: 10px
-//       display: inline-block
-//       strong
-//         display: block
-//         font-size: 26px

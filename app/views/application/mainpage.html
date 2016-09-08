@@ -1,19 +1,29 @@
-<div class="container header">
-  Tommy Bernaciak
-</div>
-
 <div class="container mainpage-sections">
-  <% @sections.each do |section| %>
-    <div class="mainpage-section">
-      <div class="mainpage-section-header"><%= section.title %></div>
-      <div class="mainpage-section-content">
-        <%= section.content %>
-      </div>
-      <% if section.section_id == 'twitter' %>
-        <div class="mainpage-section-content highlight">
-          twitter content
-        </div>
-      <% end %>
+  <div class="mainpage-section" id="aboutme">
+    <div class="mainpage-section-header">About Me</div>
+    <div class="mainpage-section-content">
+      My name is Tommy.
     </div>
-  <% end %>
+    <div class="mainpage-section-content highlight">
+      twitter content
+    </div>
+  </div>
+  <div class="mainpage-section" id="linkedin">
+    <div class="mainpage-section-header">LinkedIn</div>
+    <div class="mainpage-section-content">
+      Linked
+    </div>
+    <div class="mainpage-section-content highlight">
+      LinkedIn content.
+    </div>
+  </div>
+  <div class="mainpage-section" id="twitter">
+    <div class="mainpage-section-header">Twitter</div>
+    <div class="mainpage-section-content">
+      tweet
+    </div>
+    <div class="mainpage-section-content highlight">
+      Twitter content.
+    </div>
+  </div>
 </div>
