@@ -1,12 +1,21 @@
-$header_size: 60px;
-$section_header_size: 40px;
-$section_content_size: 20px;
+// fonts
+$header_size: 7vw;
+$menu_size: 2vw;
+$section_header_size: 4vw;
+$section_content_size: 2vw;
 
 // colors
-$color_background: #ECECEC;
-$color_font: #333a56;
-$color_highlight: #221D5A;
-$color_buttons: #ffffff;
-$color_border: #e8e8e8;
+$color_background: #ffffff;
+$color_font: #5e5e5e;
+$color_highlight: #7fc7af;
+$color_border: #e6e6e6;
 
 $color_admin_border: red;
+
+// div sizes
+$header_width: 60vw;
+$header_padding: 2vw;
+
+$sidebar_width: 15vw;
+$content_width: 70vw;
+

@@ -15,8 +15,12 @@ class ApplicationController < ActionController::Base
   private
 
   def http_basic_auth
-    unless authenticate_with_http_basic { |user, password| user == Rails.application.secrets.admin_user && password == Rails.application.secrets.admin_pass }
-      request_http_basic_authentication
+    if Rails.env.production?
+      unless authenticate_with_http_basic do |user, password|
+          user == Rails.application.secrets.admin_user && password == Rails.application.secrets.admin_pass
+        end
+        request_http_basic_authentication
+      end
     end
   end
 end

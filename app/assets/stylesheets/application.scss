@@ -1,8 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "layout";
 @import "mainpage";
-@import "navbar";
 @import "admin";
 
 @font-face {
@@ -42,11 +42,8 @@ label {
   }
 }
 
-
-.header {
-  font-size: $header_size;
-  padding: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 500px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
+

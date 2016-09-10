@@ -1,18 +1,14 @@
-.mainpage-sections {
-  padding: 15px;
+.section {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $color_border;
 }
 
-.mainpage-section {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.mainpage-section-header {
+.section-header {
   font-size: $section_header_size;
 }
 
-.mainpage-section-content {
-
+.section-content {
 }
 
 .highlight {
