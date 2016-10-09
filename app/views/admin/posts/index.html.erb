@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="col-sm-10 col-sm-offset-1 col-xs-12 blog-content">
+    <table class="table table-bordered admin-table">
+      <tr>
+        <th>Title</th>
+        <th>Intro</th>
+        <th>Date</th>
+        <th>Published</th>
+        <th>Actions</th>
+      </tr>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= raw(post.body).truncate(50) %></td>
+          <td><%= post.created_at.strftime('%b %d, %Y') %></td>
+          <td> - </td>
+          <td>
+            <button type="button" class="btn admin-button btn-default">
+              <span class="glyphicon glyphicon-eye-open"></span>
+            </button>
+            <button type="button" class="btn admin-button btn-default">
+              <span class="glyphicon glyphicon-edit"></span>
+            </button>
+            <button type="button" class="btn admin-button btn-default">
+              <span class="glyphicon glyphicon-check"></span>
+            </button>
+            <button type="button" class="btn admin-button btn-danger">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

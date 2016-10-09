@@ -8,25 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<div class="container header">
-  <a href="/">Tommy Bernaciak</a>
-</div>
-<div class="container menu">
-  <a href="/">About Me</a>
-  /
-  <a href="/blog">Blog</a>
-  /
-  <a href="/contact">Contact</a>
-</div>
-
-<div class="container wrapper">
-  <div class="sidebar">
-  <%= render 'layouts/sidebar.html.erb' %>
-  </div>
-  <div class="content">
-    <%= yield %>
-  </div>
+  <%= render "layouts/navbar" %>
+  <%= render "layouts/header" %>
+  <%= yield %>
+  <%= render "layouts/footer" %>
 </body>
 </html>
 

@@ -1,4 +1,18 @@
-.admin {
+.admin-container {
   border-style: solid;
-  border-color: $color_admin_border;
+  border-color: $color_admin;
+  margin-top: 60px;
+  padding: 5px;
+}
+
+.admin-navbar {
+  background-color: $color_admin;
+}
+
+.admin-button {
+  padding: 5px 10px;
+}
+
+.admin-table th, td {
+    max-width: 50px;
 }
