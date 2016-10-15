@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @title = 'Blog'
-    @posts = (Post.published.sort_by &:published_at).reverse
+    @posts = Post.sorted_by_publish_date
   end
 
   def show

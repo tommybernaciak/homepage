@@ -10,6 +10,14 @@ class Post < ActiveRecord::Base
     where(published: true)
   end
 
+  def self.sorted_by_update_date
+    (all.sort_by &:updated_at).reverse || []
+  end
+
+  def self.sorted_by_publish_date
+    (published.sort_by &:published_at).reverse || []
+  end
+
   def updated_date
     updated_at.strftime('%b %d, %Y')
   end

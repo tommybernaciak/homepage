@@ -3,7 +3,7 @@ module Admin
   before_action :post, only: [:edit, :update, :show, :destroy]
 
   def index
-    @posts = (Post.all.sort_by &:updated_at).reverse
+    @posts = Post.sorted_by_update_date
   end
 
   def new
