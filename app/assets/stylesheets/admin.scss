@@ -2,7 +2,10 @@
   border-style: solid;
   border-color: $color_admin;
   margin-top: 60px;
-  padding: 5px;
+  padding: 15px;
+  font-family: 'ubuntu-L', sans-serif;
+  font-size: 14px;
+  color: #000000;
 }
 
 .admin-navbar {
@@ -13,6 +16,10 @@
   padding: 5px 10px;
 }
 
-.admin-table th, td {
-    max-width: 50px;
+.error {
+  color: red;
+}
+
+.admin-table {
+  width: 100%;
 }

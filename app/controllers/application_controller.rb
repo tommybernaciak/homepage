@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :http_basic_auth
+  before_filter :page_title
 
   def about ; end
 
@@ -10,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # delete this method on blog launch
   def http_basic_auth
     if Rails.env.production?
       unless authenticate_with_http_basic do |user, password|
@@ -18,5 +20,9 @@ class ApplicationController < ActionController::Base
         request_http_basic_authentication
       end
     end
+  end
+
+  def page_title
+    @title = action_name.humanize || ''
   end
 end

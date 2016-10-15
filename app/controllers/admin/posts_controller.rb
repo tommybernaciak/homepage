@@ -1,9 +1,9 @@
 module Admin
   class PostsController < AdminController
-  before_action :post, only: [:edit, :update, :show, :delete]
+  before_action :post, only: [:edit, :update, :show, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = (Post.all.sort_by &:updated_at).reverse
   end
 
   def new
@@ -11,10 +11,11 @@ module Admin
   end
 
   def create
+    puts post_params
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@post)
+      redirect_to admin_post_path(@post)
     else
       flash[:alert] = "Error creating new post!"
       render :new
@@ -27,7 +28,7 @@ module Admin
   def update
     if @post.update_attributes(post_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to admin_post_path(@post)
     else
       flash[:alert] = "Error updating post!"
       render :edit
@@ -39,8 +40,17 @@ module Admin
 
   def destroy
     if @post.destroy
-      flash[:notice] = "Successfully deleted post!"
-      redirect_to posts_path
+      redirect_to admin_posts_path
+    else
+      flash[:alert] = "Error updating post!"
+    end
+  end
+
+  # TODO: use :id instead of :post_id
+  def publish
+    @post = Post.find(params[:post_id])
+    if @post.publish
+      redirect_to admin_posts_path
     else
       flash[:alert] = "Error updating post!"
     end
@@ -49,7 +59,7 @@ module Admin
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :published)
   end
 
   def post

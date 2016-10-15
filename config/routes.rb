@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root 'application#about'
   get '/contact', to: 'application#contact'
-  resources :posts do
-    get '/posts', to: 'posts#index'
-    get '/posts/:id', to: 'posts#show'
-  end
+  resources :posts
   namespace :admin do
     get '/', to: 'admin#dashboard'
-    resources :posts
+    resources :posts do
+      post '/publish', to: 'posts#publish'
+    end
   end
 end
