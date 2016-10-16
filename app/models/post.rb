@@ -31,7 +31,11 @@ class Post < ActiveRecord::Base
   end
 
   def publish
+    puts 'publish'
+    puts published
     update(published: !published)
     update(published_at: DateTime.now) if published
+    puts published
+    puts published_at
   end
 end

@@ -6,7 +6,10 @@ module Admin
     before_filter :http_basic_auth
     layout 'admin'
 
-  def dashboard ; end
+  def dashboard
+    @all_posts = Post.all.count
+    @published_posts = Post.published.count
+  end
 
     private
 

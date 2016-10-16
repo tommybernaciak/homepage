@@ -53,6 +53,7 @@ module Admin
       redirect_to admin_posts_path
     else
       flash[:alert] = "Error updating post!"
+      redirect_to admin_posts_path
     end
   end
 
