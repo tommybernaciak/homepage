@@ -13,6 +13,7 @@ gem 'puma'
 gem 'lograge'
 gem 'simple_form'
 gem 'ckeditor'
+gem 'font-awesome-sass', '~> 4.6.2'
 
 group :development, :test do
   gem 'byebug'

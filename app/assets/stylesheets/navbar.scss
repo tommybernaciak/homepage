@@ -10,14 +10,14 @@
   font-weight: 800;
 }
 .navbar-custom .navbar-header .navbar-toggle {
-  color: #777777;
+  color: $navbar-font-color;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: $navbar-font-size;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: $navbar-font-size;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -60,7 +60,7 @@
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -61px;
+    top: -70px;
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
     -webkit-transition: -webkit-transform 0.3s;

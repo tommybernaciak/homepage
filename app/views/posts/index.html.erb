@@ -12,7 +12,11 @@
       </div>
 
       <div class="text-center">
-        <%= link_to "READ MORE", post_path(post) %>
+        <%= link_to post_path(post) do %>
+          <button type="button" class="btn admin-button btn-default">
+            <span>READ</span>
+          </button>
+        <% end %>
       </div>
       <br>
     </div>

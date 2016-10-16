@@ -4,6 +4,11 @@
       <span>EDIT</span>
     </button>
   <% end %>
+  <%= link_to admin_post_publish_path(@post), method: :post  do %>
+    <button type="button" class="btn admin-button btn-default">
+      <span>PUBLISH</span>
+    </button>
+  <% end %>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -14,3 +19,4 @@
     </div>
   </div>
 </article>
+
