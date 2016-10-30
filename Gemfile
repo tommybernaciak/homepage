@@ -16,6 +16,7 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
+gem 'disqus'
 
 group :development, :test do
   gem 'byebug'

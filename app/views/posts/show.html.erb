@@ -6,6 +6,9 @@
         <h5 class="text-center"><%= @post.published_at.strftime('%b %d, %Y') %></h5>
         <div><%= to_markdown(@post.short_intro) %></div>
         <div><%= to_markdown(@post.body) %></div>
+        <div id ="disqus_thread">
+          <%= raw disqus_thread %>
+        </div>
       </div>
     </div>
   </div>

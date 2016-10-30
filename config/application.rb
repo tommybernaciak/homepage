@@ -14,7 +14,7 @@ module Homepage
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'London'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -22,5 +22,12 @@ module Homepage
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.after_initialize do
+      Disqus::defaults[:account] = "tommybernaciak"
+      Disqus::defaults[:developer] = true
+      Disqus::defaults[:container_id] = "disqus_thread"
+      Disqus::defaults[:show_powered_by] = false
+    end
   end
 end
