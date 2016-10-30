@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  validates :title, :body, presence: true
+  validates :title, :short_intro, :body, presence: true
   before_create :init_publish_date
 
   def init_publish_date
@@ -24,10 +24,6 @@ class Post < ActiveRecord::Base
 
   def published_date
     published_at.strftime('%b %d, %Y')
-  end
-
-  def short_intro
-    body.truncate(80)
   end
 
   def publish

@@ -11,7 +11,7 @@
       <% @posts.each do |post| %>
         <tr>
           <td><%= post.title %></td>
-          <td><%= sanitize post.short_intro %></td>
+          <td><%= to_markdown(post.short_intro) %></td>
           <td><%= post.updated_date %></td>
           <td><%= post.published ? post.published_date : '-' %></td>
           <td>

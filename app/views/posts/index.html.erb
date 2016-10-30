@@ -8,12 +8,12 @@
       </div>
 
       <div>
-        <%= raw(post.body).truncate(358) %>
+        <%= to_markdown(post.short_intro) %>
       </div>
 
       <div class="text-center">
         <%= link_to post_path(post) do %>
-          <button type="button" class="btn admin-button btn-default">
+          <button type="button" class="btn btn-default">
             <span>READ</span>
           </button>
         <% end %>

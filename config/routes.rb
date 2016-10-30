@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
   root 'application#about'
   get '/contact', to: 'application#contact'
   resources :posts
