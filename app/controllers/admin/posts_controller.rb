@@ -60,7 +60,7 @@ module Admin
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :short_intro, :published)
+    params.require(:post).permit(:title, :body, :short_intro, :published, :all_tags)
   end
 
   def post

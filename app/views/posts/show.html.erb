@@ -6,6 +6,12 @@
         <h5 class="text-center"><%= @post.published_at.strftime('%b %d, %Y') %></h5>
         <div><%= to_markdown(@post.short_intro) %></div>
         <div><%= to_markdown(@post.body) %></div>
+        <div>
+          Tags:
+          <% @post.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag.name) %>
+          <% end %>
+        </div>
         <div id ="disqus_thread">
           <%= raw disqus_thread %>
         </div>

@@ -2,7 +2,11 @@ class PostsController < ApplicationController
 
   def index
     @title = 'Blog'
-    @posts = Post.sorted_by_publish_date
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.sorted_by_publish_date
+    end
   end
 
   def show

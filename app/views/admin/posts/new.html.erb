@@ -19,6 +19,9 @@
     <%= f.input :body,  input_html: { cols: 5, rows: 40 }, class: "form-control" %>
   </div>
   <div class="form-group">
+    <%= f.input :all_tags, placeholder: "Tags separated with comma" %>
+  </div>
+  <div class="form-group">
     <%= f.button :submit %>
   </div>
 <% end %>

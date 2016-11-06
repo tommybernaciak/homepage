@@ -4,17 +4,19 @@
       <tr>
         <th>Title</th>
         <th>Intro</th>
+        <th>Tags</th>
         <th>Updated</th>
         <th>Published</th>
-        <th>Actions</th>
+        <th class="action-buttons">Actions</th>
       </tr>
       <% @posts.each do |post| %>
         <tr>
           <td><%= post.title %></td>
           <td><%= to_markdown(post.short_intro) %></td>
+          <td><%= post.all_tags %></td>
           <td><%= post.updated_date %></td>
           <td><%= post.published ? post.published_date : '-' %></td>
-          <td>
+          <td class="action-buttons">
             <%= link_to admin_post_path(post)  do %>
               <button type="button" class="btn admin-button btn-default">
                 <span class="glyphicon glyphicon-eye-open"></span>
