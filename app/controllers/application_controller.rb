@@ -5,9 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :http_basic_auth
   before_filter :page_title
 
-  def about ; end
-
-  def contact ; end
+  def me ; end
 
   private
 

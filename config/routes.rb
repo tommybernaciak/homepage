@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#about'
-  get '/contact', to: 'application#contact'
+  root 'posts#index'
+  get '/me', to: 'application#me'
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
   namespace :admin do

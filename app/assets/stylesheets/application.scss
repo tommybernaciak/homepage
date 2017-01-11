@@ -100,7 +100,13 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
+
+.favicon-link {
+  display: inline-block;
+}
+
 body {
   -webkit-tap-highlight-color: $focus-color;
 }
+
 
