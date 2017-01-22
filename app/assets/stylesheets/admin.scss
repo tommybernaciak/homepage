@@ -1,6 +1,6 @@
 .admin-container {
   border-style: solid;
-  border-color: $color_admin;
+  border-color: $color-admin;
   margin-top: 60px;
   padding: 15px;
   font-family: 'ubuntu-L', sans-serif;
@@ -9,7 +9,7 @@
 }
 
 .admin-navbar {
-  background-color: $color_admin;
+  background-color: $color-admin;
 }
 
 .admin-button {
