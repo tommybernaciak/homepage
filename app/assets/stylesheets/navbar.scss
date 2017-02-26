@@ -6,15 +6,43 @@
   z-index: 3;
   font-family: 'ubuntu-B', sans-serif;
 }
-.navbar-custom .navbar-brand {
-  font-weight: 800;
-}
+
 .navbar-custom .navbar-header .navbar-toggle {
   color: $navbar-font-color;
   font-weight: 800;
   text-transform: uppercase;
   font-size: $navbar-font-size;
+  border: 0;
 }
+
+.menu-fa {
+  font-size: 20px;
+  color: $text-color;
+}
+
+// desktop
+@media only screen and (min-width: 768px) {
+  .navbar-heading {
+    display: none;
+  }
+}
+
+//  mobile
+@media only screen and (max-width: 768px) {
+  .navbar-heading {
+    float: left;
+    margin: 8px 0 8px 15px;
+    padding: 5px;
+  }
+  .navbar-heading .nav-heading {
+    margin: 0;
+  }
+}
+
+
+
+// TODO: check what is needed
+
 .navbar-custom .nav li a {
   text-transform: uppercase;
   font-size: $navbar-font-size;

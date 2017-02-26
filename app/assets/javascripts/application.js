@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require startbootstrap-script
+//= require header-scroll
 //= require_tree .
 
 
