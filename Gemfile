@@ -17,6 +17,8 @@ gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
 gem 'disqus'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
   gem 'byebug'

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # delete this method on blog launch
+  # TODO: delete this method on blog launch
   def http_basic_auth
     if Rails.env.production?
       unless authenticate_with_http_basic do |user, password|
