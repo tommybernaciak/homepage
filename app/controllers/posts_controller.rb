@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   def index
-    puts 'here'
     @title = 'Blog'
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])

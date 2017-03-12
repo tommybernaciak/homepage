@@ -1,17 +1,34 @@
 ActiveAdmin.register Post do
 
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-permit_params :published
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+  permit_params :title, :short_intro, :body, :published, :tags
+
+  index do
+    selectable_column
+    column :title
+    column :short_intro
+    column :tags
+    column :published
+    column :published_at
+    column :created_at
+    actions
+  end
+
+  show do
+    attributes_table do
+      row :title
+      row :short_intro
+      row :body
+      row :tags
+      row :published
+      row :published_at
+      row :created_at
+      row :updated_at
+    end
+  end
 
 
+  form do |f|
+    inputs :title, :short_intro, :body, :tags, :published
+    actions
+  end
 end
