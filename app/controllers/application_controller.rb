@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :http_basic_auth
-  before_filter :page_title
 
-  def me ; end
+  def me
+    @title = action_name.humanize
+  end
 
   private
 
@@ -18,9 +19,5 @@ class ApplicationController < ActionController::Base
         request_http_basic_authentication
       end
     end
-  end
-
-  def page_title
-    @title = action_name.humanize || ''
   end
 end

@@ -1,5 +1,13 @@
+.post-heading {
+  font-size: $post-heading-font-size;
+  text-decoration: none;
+}
+.post-heading:hover {
+  text-decoration: none;
+}
+
 .post-preview {
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 
 .tags a {
@@ -7,10 +15,7 @@
   text-decoration: none;
 }
 
-.read-more {
-  margin-top: 10px;
-}
-.read-more a {
-  font-weight: 600;
-  text-decoration: none;
+blockquote {
+  color: #777777;
+  font-style: italic;
 }

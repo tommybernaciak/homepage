@@ -12,16 +12,20 @@ class Post < ActiveRecord::Base
     where(published: true)
   end
 
-  def self.sorted_by_update_date
-    (all.sort_by &:updated_at).reverse || []
-  end
-
   def self.sorted_by_publish_date
     (published.sort_by &:published_at).reverse || []
   end
 
   def self.tagged_with(name)
-    Tag.find_by_name!(name).posts.sorted_by_publish_date
+    Tag.find_by_name!(name).posts
+  end
+
+  def self.filtered(show_all)
+    if show_all == 'true'
+      sorted_by_publish_date
+    else
+      sorted_by_publish_date.first(5)
+    end
   end
 
   def updated_date

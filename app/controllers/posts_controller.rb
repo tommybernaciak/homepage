@@ -3,9 +3,10 @@ class PostsController < ApplicationController
   def index
     @title = 'Blog'
     if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).filtered(params[:all])
     else
-      @posts = Post.sorted_by_publish_date
+      puts Post.filtered(params[:all])
+      @posts = Post.filtered(params[:all])
     end
   end
 
