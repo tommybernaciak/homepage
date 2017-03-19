@@ -6,7 +6,7 @@
       <%= link_to 'All', posts_path(all: true), class: "animated-button #{'selected' if all_selected}" %>
     </div>
     <% @posts.each do |post| %>
-      <div class="col-xs-12 post-preview">
+      <div class="post-preview">
         <div class="text-center">
           <h1><%= link_to post.title, post_path(post), class: "post-heading" %></h1>
           <h6><%= post.published_date %></h6>

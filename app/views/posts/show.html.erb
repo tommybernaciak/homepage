@@ -1,6 +1,6 @@
 <article>
   <div class="container content">
-    <div class="row">
+    <div class="row post-show">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <h1 class="text-center"><%= @post.title %></h1>
         <h5 class="text-center"><%= @post.published_at.strftime('%b %d, %Y') %></h5>
@@ -12,6 +12,9 @@
             <%= link_to tag.name, tag_path(tag.name) %>
           <% end %>
         </div>
+        <div class="animation-wrap back-button">
+          <%= link_to 'Back to posts', posts_path, class: "animated-button" %>
+        </div>
         <div id ="disqus_thread">
           <%= raw disqus_thread %>
         </div>
@@ -19,4 +22,3 @@
     </div>
   </div>
 </article>
-<hr>
