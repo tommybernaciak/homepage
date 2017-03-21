@@ -19,6 +19,7 @@ gem 'nokogiri'
 gem 'disqus'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'social-share-button'
 
 group :development, :test do
   gem 'byebug'

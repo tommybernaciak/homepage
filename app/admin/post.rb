@@ -1,12 +1,12 @@
 ActiveAdmin.register Post do
 
-  permit_params :title, :short_intro, :body, :published, :tags
+  permit_params :title, :short_intro, :body, :published, :all_tags
 
   index do
     selectable_column
     column :title
     column :short_intro
-    column :tags
+    column :all_tags
     column :published
     column :published_at
     column :created_at
@@ -18,7 +18,7 @@ ActiveAdmin.register Post do
       row :title
       row :short_intro
       row :body
-      row :tags
+      row :all_tags
       row :published
       row :published_at
       row :created_at
@@ -28,7 +28,7 @@ ActiveAdmin.register Post do
 
 
   form do |f|
-    inputs :title, :short_intro, :body, :tags, :published
+    inputs :title, :short_intro, :body, :all_tags, :published
     actions
   end
 end

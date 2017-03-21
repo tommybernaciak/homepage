@@ -12,6 +12,7 @@
             <%= link_to tag.name, tag_path(tag.name) %>
           <% end %>
         </div>
+        <%= social_share_button_tag(@post.title) %>
         <div class="animation-wrap back-button">
           <%= link_to 'Back to posts', posts_path, class: "animated-button" %>
         </div>

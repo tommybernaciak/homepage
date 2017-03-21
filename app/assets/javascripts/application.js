@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require header-scroll
+//= require social-share-button
 //= require_tree .
 
 
