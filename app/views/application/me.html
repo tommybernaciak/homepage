@@ -1,12 +1,8 @@
 <div class="container content">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <p> Hi, my name is Tommy. I work as a Software Developer at Stratajet, London. I use Ruby on Rails and AngularJS.
-        I hold a masters degree in Computer Science from Lodz University of Technology. I write about code, ux and design.
-      </p>
-
-      <p>Currently: Software Developer at Stratajet, London</p>
-      <p>Previously: Ruby on Rails Developer at BinarApps, Łódź</p>
+      <div><%= to_markdown(@about_me) %></div>
+      <div><%= to_markdown(@work) %></div>
     </div>
   </div>
 
