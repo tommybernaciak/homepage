@@ -5,7 +5,6 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).filtered(params[:all])
     else
-      puts Post.filtered(params[:all])
       @posts = Post.filtered(params[:all])
     end
   end
@@ -14,5 +13,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = @post.title
     redirect_to posts_path unless @post.published
+    rescue ActiveRecord::RecordNotFound
+      redirect_to posts_path
   end
 end

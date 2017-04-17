@@ -3,7 +3,7 @@
     <div class="row post-show">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <h1 class="text-center"><%= @post.title %></h1>
-        <h5 class="text-center"><%= @post.published_at.strftime('%b %d, %Y') %></h5>
+        <h5 class="text-center"><%= @post.published_date %></h5>
         <div><%= to_markdown(@post.short_intro) %></div>
         <div><%= to_markdown(@post.body) %></div>
         <div class="tags">

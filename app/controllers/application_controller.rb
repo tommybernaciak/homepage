@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def me
     @title = action_name.humanize
-    @about_me = StaticContent.about_me
-    @work = StaticContent.work
+    @about_me = StaticContent.get_body('me')
+    @work = StaticContent.get_body('work')
   end
 end
