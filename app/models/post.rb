@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   validates :title, :short_intro, :body, presence: true
   before_save :publish
@@ -25,7 +25,7 @@ class Post < ActiveRecord::Base
   end
 
   def publish
-    self.published_at = DateTime.now if self.published
+    self.published_at = DateTime.now if self.published && !self.published_at
   end
 
   def published_date
