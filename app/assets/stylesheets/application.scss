@@ -24,6 +24,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'proFont';
+  src: asset-url('ProFontWindows.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'ubuntu-L', sans-serif;
   font-size: $post-content-font-size;

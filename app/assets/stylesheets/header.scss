@@ -1,37 +1,30 @@
 .intro-header {
-  background-color: #777777;
-  background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  margin-bottom: 50px;
-  background-image: asset-url('web-developer-blog-background.png');
+  background-color: $header-background-color;
+  margin-bottom: 30px;
   opacity: 0.9;
-  font-family: 'ubuntu-L', sans-serif;
+  font-family: 'proFont', sans-serif;
   box-shadow: 1px 5px 10px black;
+  color: $header-text-color;
 }
 
 .intro-header .site-heading {
-  color: white;
   text-align: center;
 }
 
 // desktop
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading {
-    padding: 50px 0 150px 0;
+    padding: 50px 0 80px 0;
   }
 
   .intro-header .site-heading .heading {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
     margin: 15px 0 5px 0;
   }
 
   .intro-header .site-heading .subheading {
-    font-size: 24px;
+    font-size: 2em;
     line-height: 1.1;
     display: block;
     font-weight: 300;
@@ -64,17 +57,17 @@
   }
 
   hr.small {
-    max-width: 100px;
+    max-width: 450px;
     margin: 3px auto;
     border-width: 4px;
-    border-color: white;
+    border-color: $header-text-color;;
   }
 }
 
 // mobile
 @media only screen and (max-width: 768px) {
   .intro-header .site-heading {
-    padding: 80px 0;
+    padding: 80px 0 20px 0;
   }
 
   .intro-header .site-heading .heading {

@@ -4,11 +4,11 @@
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: 'ubuntu-B', sans-serif;
+  font-family: 'proFont', sans-serif;
 }
 
 .navbar-custom .navbar-header .navbar-toggle {
-  color: $navbar-font-color;
+  color: $navbar-text-color;
   font-weight: 800;
   text-transform: uppercase;
   font-size: $navbar-font-size;
