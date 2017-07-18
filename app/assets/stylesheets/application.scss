@@ -10,29 +10,9 @@
 @import "footer";
 @import "button";
 
-@font-face {
-  font-family: 'ubuntu-L';
-  src: asset-url('Ubuntu-L.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ubuntu-B';
-  src: asset-url('Ubuntu-B.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'proFont';
-  src: asset-url('ProFontWindows.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
-  font-family: 'ubuntu-L', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: $post-content-font-size;
   color: $text-color;
   -webkit-tap-highlight-color: $focus-color;
@@ -42,19 +22,24 @@ body {
 p {
   line-height: 1.5;
   margin: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
 }
 p a {
   text-decoration: underline;
 }
 
-h1,
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'ubuntu-B', sans-serif;
-  font-weight: 800;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
