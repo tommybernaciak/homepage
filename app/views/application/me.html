@@ -1,8 +1,16 @@
 <div class="container content">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div><%= to_markdown(@about_me) %></div>
-      <div><%= to_markdown(@work) %></div>
+      <div><%= render_markdown(@about_me) %></div>
+      <div><%= render_markdown(@work) %></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+      <h1>Support this blog</h1>
+      <h6>17TK4kjVDW1jUHK2ZzxPf7BV46yx9EmJw3</h6>
+      <%= image_tag("btc.png", size: "200") %>
     </div>
   </div>
 

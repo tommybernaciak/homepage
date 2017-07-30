@@ -1,0 +1,10 @@
+Metrics/LineLength:
+  Max: 160
+
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/**'
+    - 'Gemfile'

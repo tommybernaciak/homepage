@@ -4,8 +4,8 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <h1 class="post-heading text-center"><%= @post.title %></h1>
         <h5 class="text-center"><%= @post.published_date %></h5>
-        <div class="post-content"><%= to_markdown(@post.short_intro) %></div>
-        <div class="post-content"><%= to_markdown(@post.body) %></div>
+        <div class="post-content"><%= raw render_markdown(@post.short_intro) %></div>
+        <div class="post-content"><%= raw render_markdown(@post.body) %></div>
         <div class="tags">
           Tags:
           <% @post.tags.each do |tag| %>

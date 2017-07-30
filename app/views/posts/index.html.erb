@@ -11,7 +11,7 @@
           <h1><%= link_to post.title, post_path(post), class: "post-heading" %></h1>
           <h6><%= post.published_date %></h6>
         </div>
-        <div><%= to_markdown(post.short_intro) %></div>
+        <div><%= render_markdown(post.short_intro) %></div>
         <div class="tags">
           Tags:
           <% post.tags.each do |tag| %>
