@@ -25,7 +25,7 @@ class Post < ActiveRecord::Base
   end
 
   def publish
-    self.published_at = DateTime.now if self.published && !self.published_at
+    self.published_at = DateTime.now if published && !published_at
   end
 
   def published_date
@@ -33,12 +33,24 @@ class Post < ActiveRecord::Base
   end
 
   def all_tags=(names)
-    self.tags = names.split(",").map do |name|
+    self.tags = names.split(',').map do |name|
       Tag.where(name: name.strip.downcase).first_or_create!
     end
   end
 
   def all_tags
-    self.tags.map(&:name).join(", ")
+    tags.map(&:name).join(', ')
+  end
+
+  def slug
+    title.downcase.gsub(' ', '-')
+  end
+
+  def slug_date
+    published_at.strftime('%d-%m-%y').to_s
+  end
+
+  def to_param
+    "#{id}-#{slug_date}-#{slug}"
   end
 end

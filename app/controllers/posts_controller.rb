@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @title = @post.title
     redirect_to posts_path unless @post.published
-    rescue ActiveRecord::RecordNotFound
-      redirect_to posts_path
+  rescue ActiveRecord::RecordNotFound
+    redirect_to posts_path
   end
 end
