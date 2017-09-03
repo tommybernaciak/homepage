@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     @about_me = StaticContent.get_body('me')
     @work = StaticContent.get_body('work')
   end
+
+  def admin_only
+    redirect_to '/' unless admin_signed_in?
+  end
 end

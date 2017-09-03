@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   get '/me', to: 'application#me'
+  get '/admin_only', to: 'application#admin_only'
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: "tag"
 end
