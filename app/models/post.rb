@@ -43,14 +43,14 @@ class Post < ActiveRecord::Base
   end
 
   def slug
-    title.downcase.gsub(' ', '-')
+    title.downcase.gsub(' ', '-').gsub('?', '')
   end
 
   def slug_date
-    published_at.strftime('%d-%m-%y').to_s
+    published_at.strftime('%d-%m-%y').to_s if published_at
   end
 
   def to_param
-    "#{id}-#{slug_date}-#{slug}"
+    slug_date ? "#{id}-#{slug_date}-#{slug}" : "#{id}-unpublished-#{slug}"
   end
 end
