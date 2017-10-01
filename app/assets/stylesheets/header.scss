@@ -1,10 +1,10 @@
 .intro-header {
-  background-color: $header-background-color;
+  background-color: $header-back;
   margin-bottom: 30px;
   opacity: 0.9;
   font-family: 'Oxygen', sans-serif;
   box-shadow: 1px 5px 10px black;
-  color: $header-text-color;
+  color: $header-text;
 }
 
 .intro-header .site-heading {
@@ -30,38 +30,13 @@
     display: block;
     font-weight: 300;
     margin: 10px 0 0;
-    -webkit-animation-duration: 6s;
-    animation-duration: 6s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn
   }
 
   hr.small {
     max-width: 450px;
     margin: 3px auto;
     border-width: 4px;
-    border-color: $header-text-color;;
+    border-color: $header-text;
   }
 }
 

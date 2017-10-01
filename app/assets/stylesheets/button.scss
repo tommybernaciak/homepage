@@ -11,12 +11,6 @@
   font-size: 16px;
   padding: 25px 35px;
 }
-.btn-default:hover,
-.btn-default:focus {
-  background-color: #0085A1;
-  border: 1px solid #0085A1;
-  color: white;
-}
 
 .animation-wrap {
   display: flex;
@@ -30,14 +24,15 @@ a.animated-button {
   margin-right: 20px;
   font-size: 16px;
   font-weight: 800;
-  background: $background-color;
+  background: $button-background;
+  color: $button;
   border-radius: 20px;
   padding: 10px 20px;
   text-decoration: none;
 }
 
 a.animated-button.selected {
-  border: 1px solid $text-color;
+  border: 1px solid $text-main;
 }
 
 a.animated-button:hover {

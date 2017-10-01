@@ -1,7 +1,8 @@
 footer {
   padding: 5px 0 5px;
-  background-color: $footer-background-color;
+  background-color: $footer-back;
   font-family: 'Oxygen', sans-serif;
+  border-top: 1px solid $highlight;
 }
 footer .list-inline {
   margin: 0;

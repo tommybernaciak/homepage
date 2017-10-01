@@ -14,9 +14,9 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   font-size: $post-content-font-size;
-  color: $text-color;
-  -webkit-tap-highlight-color: $focus-color;
-  background-color: $background-color
+  color: $text-main;
+  -webkit-tap-highlight-color: $focus;
+  background-color: $background
 }
 
 p {
@@ -43,11 +43,11 @@ h6 {
 }
 
 a {
-  color: #333333;
+  color: $button;
 }
 a:hover,
 a:focus {
-  color: $focus-color;
+  color: $focus;
 }
 a img:hover,
 a img:focus {
@@ -55,7 +55,7 @@ a img:focus {
 }
 
 .content {
-  background-color: $container-color;
+  background-color: $container;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -73,20 +73,12 @@ a img:focus {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: $focus-color;
+  background: $focus;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: $focus-color;
-}
-img::selection {
-  color: white;
-  background: transparent;
-}
-img::-moz-selection {
-  color: white;
-  background: transparent;
+  background: $focus;
 }
 
 .fa-icon-link {
@@ -97,10 +89,9 @@ img::-moz-selection {
   margin: 20px;
 }
 
-
 // ADMIN ONLY
 .admin_only {
-  color: red;
+  color: $color-admin;
 }
 // desktop
 @media only screen and (min-width: 768px) {
